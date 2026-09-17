@@ -1,19 +1,29 @@
-# Product brief
+# Product requirements and verification map — Governed Analytics Workbench
 
-Governed Operations Analytics serves Operations and data leaders.
+| Requirement | Implementation | Verification |
+|---|---|
+| R-01: AI tool architecture | Optional model-generated semantic plan; generated SQL is never accepted and the plan must preserve the deterministic request interpretation. | Domain suites listed below; inspect current CI evidence. |
+| R-02: Semantic governance | Versioned MetricDefinition entities and a MetricCatalog define expressions, units, ownership, grain and null policy. | Domain suites listed below; inspect current CI evidence. |
+| R-03: Data access controls | Explicit region scope, fixed identifiers and parameter-bound values prevent the planner from widening the query. | Domain suites listed below; inspect current CI evidence. |
+| R-04: Independent reconciliation | Every SQL aggregate is recomputed from authorized records before release. | Domain suites listed below; inspect current CI evidence. |
+| R-05: Disclosure controls | Primary and complementary suppression withhold undersized groups and avoid publishing revealing totals. | Domain suites listed below; inspect current CI evidence. |
+| R-06: Planner evaluation | Executable positive, ambiguity, temporal-filter, individual-data and unsupported-grouping regression cases. | Domain suites listed below; inspect current CI evidence. |
 
-The decision is: Can a manager ask a data question and trust the answer?
+## Executable suites
 
-## Implemented outcome
+- `tests/test_governed_analytics.py`
+- `tests/test_semantic_product.py`
+- `tests/test_operations_independent.py`
 
-Translate a natural-language request into an allowlisted semantic plan, execute read-only SQL and suppress undersized groups.
+## Acceptance checks
 
-## Acceptance
+- Default and alternate scenarios execute through the public adapter and ProductApplication.
+- Invalid inputs are rejected before optional provider execution.
+- New domain results are rendered in the product interface and exported completely.
+- Saved scenario/run workflows use the common platform and preserve input revisions.
+- Current CI tests, static build and browser execution succeed for this repository.
+- A separate automated reviewer examines expanded source and records findings with validation evidence.
 
-Verify the interpreted metric, requested filters, authorized regions, SQL template and independent reconciliation.
 
-## Scope boundaries
 
-- Only three metrics and three regions are supported.
-- Local interpretation supports a documented vocabulary, not general natural language.
-- All records are original synthetic data; no employer or customer records are included.
+The product README defines user workflows and input boundaries. Architecture and domain contract documents specify calculations and assumptions; this acceptance map links those requirements to executable verification.

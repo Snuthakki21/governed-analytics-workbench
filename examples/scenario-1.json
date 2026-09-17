@@ -1,0 +1,444 @@
+{
+  "request": "How many cases are there by region?",
+  "allowed_regions": [
+    "east",
+    "central"
+  ],
+  "minimum_group_size": 5,
+  "records": [
+    {
+      "id": "SYN-east-intake-001",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 18,
+      "breached": true
+    },
+    {
+      "id": "SYN-east-intake-002",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 21,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-intake-003",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 24,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-intake-004",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 27,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-intake-005",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 30,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-intake-006",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 33,
+      "breached": true
+    },
+    {
+      "id": "SYN-east-intake-007",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 36,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-intake-008",
+      "region": "east",
+      "team": "intake",
+      "resolution_minutes": 39,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-001",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 30,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-002",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 33,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-003",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 36,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-004",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 39,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-005",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 42,
+      "breached": true
+    },
+    {
+      "id": "SYN-east-review-006",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 45,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-007",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 48,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-review-008",
+      "region": "east",
+      "team": "review",
+      "resolution_minutes": 51,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-001",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 25,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-002",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 28,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-003",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 31,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-004",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 34,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-005",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 37,
+      "breached": true
+    },
+    {
+      "id": "SYN-central-intake-006",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 40,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-007",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 43,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-008",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 46,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-009",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 49,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-intake-010",
+      "region": "central",
+      "team": "intake",
+      "resolution_minutes": 52,
+      "breached": true
+    },
+    {
+      "id": "SYN-central-review-001",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 37,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-002",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 40,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-003",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 43,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-004",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 46,
+      "breached": true
+    },
+    {
+      "id": "SYN-central-review-005",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 49,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-006",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 52,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-007",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 55,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-008",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 58,
+      "breached": false
+    },
+    {
+      "id": "SYN-central-review-009",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 61,
+      "breached": true
+    },
+    {
+      "id": "SYN-central-review-010",
+      "region": "central",
+      "team": "review",
+      "resolution_minutes": 64,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-001",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 32,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-002",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 35,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-003",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 38,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-004",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 41,
+      "breached": true
+    },
+    {
+      "id": "SYN-west-intake-005",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 44,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-006",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 47,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-007",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 50,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-008",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 53,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-009",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 56,
+      "breached": true
+    },
+    {
+      "id": "SYN-west-intake-010",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 59,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-011",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 62,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-intake-012",
+      "region": "west",
+      "team": "intake",
+      "resolution_minutes": 65,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-001",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 44,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-002",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 47,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-003",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 50,
+      "breached": true
+    },
+    {
+      "id": "SYN-west-review-004",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 53,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-005",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 56,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-006",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 59,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-007",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 62,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-008",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 65,
+      "breached": true
+    },
+    {
+      "id": "SYN-west-review-009",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 68,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-010",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 71,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-011",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 74,
+      "breached": false
+    },
+    {
+      "id": "SYN-west-review-012",
+      "region": "west",
+      "team": "review",
+      "resolution_minutes": 77,
+      "breached": false
+    },
+    {
+      "id": "SYN-east-special-1",
+      "region": "east",
+      "team": "specialist",
+      "resolution_minutes": 95,
+      "breached": true
+    },
+    {
+      "id": "SYN-east-special-2",
+      "region": "east",
+      "team": "specialist",
+      "resolution_minutes": 100,
+      "breached": true
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 {
-  "request": "What is the breach rate by team in east?",
+  "request": "How many cases by team in west?",
   "allowed_regions": [
     "east",
-    "central"
+    "central",
+    "west"
   ],
-  "minimum_group_size": 10,
+  "minimum_group_size": 5,
   "records": [
     {
       "id": "SYN-east-intake-001",

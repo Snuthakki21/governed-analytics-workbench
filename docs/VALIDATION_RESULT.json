@@ -1,0 +1,57 @@
+{
+  "repo": "governed-analytics-workbench",
+  "project_id": "governed_analytics",
+  "title": "Governed Operations Analytics",
+  "coverage": 97.69736842105263,
+  "python_tests": 138,
+  "frontend_passed": 51,
+  "examples": 4,
+  "release": "2.0.0",
+  "python_skipped": 2,
+  "frontend_skipped": 6,
+  "browser": {
+    "repo": "governed-analytics-workbench",
+    "fresh": true,
+    "history": true,
+    "branded": true,
+    "title": "Governed Operations Analytics"
+  },
+  "mobile": {
+    "repo": "governed-analytics-workbench",
+    "workspace": {
+      "scroll": 375,
+      "width": 375
+    },
+    "library": {
+      "scroll": 375,
+      "width": 375
+    },
+    "usable": true
+  },
+  "installed_wheel": {
+    "repository": "governed-analytics-workbench",
+    "status": "passed",
+    "project_id": "governed_analytics",
+    "wheel_bytes": 6446444,
+    "wheel_file": "governed_analytics_workbench-2.0.0-py3-none-any.whl",
+    "installed_cli": true,
+    "default_run": true,
+    "explicit_run": true,
+    "outside_checkout_build": true,
+    "packaged_application_source": true,
+    "fixture_count": 0,
+    "expected_fixture_count": 0,
+    "examples": 4,
+    "missing_runtime_assets": [],
+    "seconds": 3.119,
+    "wheel_sha256": "a79d84e7e3d78c54e1a05b05be764bcb72d64bc783188f9035ac9d1e03c01956",
+    "vendor_manifest_hashes_verified": 8,
+    "source_fixture_inventory_complete": true,
+    "personal_author_metadata_absent": true,
+    "pyproject_sha256": "a41ecd42afda51f82c01aa27547e8e8f946889154a6f40f4f9e81f522f6556e0",
+    "container_definition_sha256": "c205c738978ce7cecb779e14d604b3736429be760747f5880abcbf2d099c4e6b",
+    "compose_definition_sha256": "32c8bb3ab89a30043978d12874cb8c91001fcb762269765ace46fe46265faf91",
+    "docker_runtime_verified": false
+  },
+  "source_sha256": "80192aba8be4dd8acaf7427655b9dfa23e44fb7c80da993629ea3b7e59ae6697"
+}

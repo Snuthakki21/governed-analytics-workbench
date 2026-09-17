@@ -1,0 +1,24 @@
+{
+  "review": "Independent automated Staff Engineer domain review",
+  "reviewed_on": "2026-09-17",
+  "verdict": "pass_after_retest",
+  "sha256": {
+    "app/ai/__init__.py": "3b3a14d073c138b40d988b4b8190df8e8a9260df4a601bc5f4a01bc3e5eed029",
+    "app/ai/evaluation.py": "a171cd21374eff255f1a7d9b251bcdb4ef668e519daab4e5c806da117c11b22a",
+    "app/ai/planner.py": "6b5698332cfd57e2440b432714f075f4f8a7eca4979c7d737315e49d23458182",
+    "app/application/__init__.py": "4ca85bbc1f8ce81b55960e4222fee1429279e38bef72bf3070d2b1ee65bf17d7",
+    "app/application/product.py": "e0acfd80a8924cac541f200b8c62b533a36eee7ae9545c5455f032c943dd0621",
+    "app/domain/__init__.py": "2a0b1d756023f313f1d4280a19ba351434ebdbaafc2a3a6e3cde02992dcfe982",
+    "app/domain/authorization.py": "84acf3608d01684233f5456a380d1851e65e4d65260b0a8f5f364b426b2dabbc",
+    "app/domain/catalog.py": "56bb753f42bfa11bf0781bff229ed1903df63f9450901f9160232626afca1d1a",
+    "app/domain/disclosure.py": "f249d01dced664bfe5dbeea45d7fb1a7af30355ee6fb63f09a45ef15a77b985d",
+    "app/domain/query.py": "18a0ec2a1af0377371024643b085daef603108aea046abe93924bdecc7bfb5e4",
+    "app/domain/records.py": "aceebb74ed18f4c6bc3c4772172e5cb4cdf3559d8ae232522687363dc8a93e10",
+    "docs/PRODUCT.md": "83c4eb73028d71f6641e9cb507c8390e4151eaeecd454cbf1b7abee4aebb6106",
+    "docs/REQUIREMENTS.md": "f404788f3883d320e4c32fe6aea1c2b744da001ed4e824ec03b1ee14f87acc13",
+    "projects/governed_analytics/project.py": "82bbb529e84f5255cfe2b10d4b33b8eb259b36d5004fa1335a5ef789aec171f7",
+    "tests/product-review-ui.test.mjs": "d6949802163b9b56e718118d544c8a9b211150b348d0d5769ac9fb5ffe9a73ce",
+    "tests/test_product_review.py": "843d9f3ad37da20e5f85cdd24f6ddaeba7db26991faf40bac1ccc21d5ac0fbb1",
+    "web/templates/governed_analytics.js": "e0129e3eb5aab5b1760ee084aa3fa1a3c30ca1acb164cde2612f3bc78caf7e20"
+  }
+}

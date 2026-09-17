@@ -66,16 +66,183 @@
     "suppressed_group_count": 0,
     "complementary_suppression_count": 0,
     "minimum_group_size": 5,
-    "data_origin": "original synthetic operations records"
+    "data_origin": "original synthetic operations records",
+    "semantic_catalog": [
+      {
+        "identifier": "case_volume",
+        "label": "Case volume",
+        "unit": "cases",
+        "expression": "COUNT(*)",
+        "grain": "operation",
+        "version": "1.0.0",
+        "null_policy": "reject missing inputs",
+        "owner": "Operations data steward"
+      },
+      {
+        "identifier": "avg_resolution_minutes",
+        "label": "Average resolution time",
+        "unit": "minutes",
+        "expression": "AVG(resolution_minutes)",
+        "grain": "operation",
+        "version": "1.0.0",
+        "null_policy": "reject missing inputs",
+        "owner": "Operations data steward"
+      },
+      {
+        "identifier": "breach_rate",
+        "label": "Service-level breach rate",
+        "unit": "%",
+        "expression": "100.0 * AVG(breached)",
+        "grain": "operation",
+        "version": "1.0.0",
+        "null_policy": "reject missing inputs",
+        "owner": "Operations data steward"
+      }
+    ],
+    "query_explanation": {
+      "business_measure": "Average resolution time",
+      "formula": "AVG(resolution_minutes)",
+      "metric_version": "1.0.0",
+      "grain": "operation",
+      "group_by": "region",
+      "filters": {
+        "region_in": [
+          "east",
+          "central"
+        ]
+      },
+      "null_policy": "reject missing inputs",
+      "authorization_source": "caller-selected workspace scope; not authenticated identity",
+      "query_limits": {
+        "maximum_input_records": 10000,
+        "minimum_released_group": 5,
+        "allowed_groupings": [
+          "region",
+          "team",
+          "none"
+        ]
+      },
+      "steps": [
+        "Parse exactly one metric and grouping",
+        "Validate plan preserves the request",
+        "Bind selected regions as SQL parameters",
+        "Reconcile every aggregate independently",
+        "Apply primary and complementary suppression"
+      ]
+    },
+    "result_quality": {
+      "passed": true,
+      "checks": [
+        {
+          "control": "Semantic metric exists",
+          "passed": true,
+          "evidence": "avg_resolution_minutes@1.0.0"
+        },
+        {
+          "control": "Scope is explicit",
+          "passed": true,
+          "evidence": "east, central"
+        },
+        {
+          "control": "Released groups satisfy threshold",
+          "passed": true,
+          "evidence": "Every released group has at least 5 records."
+        },
+        {
+          "control": "Released values are nonnegative",
+          "passed": true,
+          "evidence": "Evaluated after independent reconciliation and suppression."
+        },
+        {
+          "control": "Rate is bounded",
+          "passed": true,
+          "evidence": "Percentage bounds enforced for rate metrics; otherwise not applicable."
+        }
+      ],
+      "released_groups": 2,
+      "disclosure_note": "Quality diagnostics contain only released output groups; no suppressed values, counts or global totals are added."
+    },
+    "planner_evaluation": {
+      "passed": 8,
+      "cases": 8,
+      "mode": "built-in deterministic interpretation regression; no live model benchmark",
+      "results": [
+        {
+          "request": "How many cases are there by region?",
+          "expected": "accepted",
+          "actual": "accepted",
+          "passed": true,
+          "explanation": "Matched the registered semantic plan."
+        },
+        {
+          "request": "Average resolution time by team in east",
+          "expected": "accepted",
+          "actual": "accepted",
+          "passed": true,
+          "explanation": "Matched the registered semantic plan."
+        },
+        {
+          "request": "What is the breach rate in west?",
+          "expected": "accepted",
+          "actual": "accepted",
+          "passed": true,
+          "explanation": "Matched the registered semantic plan."
+        },
+        {
+          "request": "What is the average resolution time and breach rate?",
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "explanation": "Ask for exactly one supported metric: case volume, average resolution time, or breach rate."
+        },
+        {
+          "request": "How many cases were resolved yesterday?",
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "explanation": "Unsupported request terms or filters: resolved, were, yesterday. Use the documented metric and region/grouping vocabulary."
+        },
+        {
+          "request": "Show customer email",
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "explanation": "Unsupported request terms or filters: customer, email. Use the documented metric and region/grouping vocabulary."
+        },
+        {
+          "request": "How many cases by employee?",
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "explanation": "Unsupported request terms or filters: employee. Use the documented metric and region/grouping vocabulary."
+        },
+        {
+          "request": "How many cases in east and west?",
+          "expected": "rejected",
+          "actual": "rejected",
+          "passed": true,
+          "explanation": "Specify one region or ask for all authorized regions."
+        }
+      ]
+    },
+    "clarification_workflow": {
+      "ambiguous_requests": "Rejected before data access. Choose one metric, one grouping, and at most one explicit region.",
+      "unsupported_filters": "Time windows and per-person requests are rejected; import the desired complete snapshot first.",
+      "examples": [
+        "How many cases are there by region?",
+        "Average resolution time by team in east",
+        "What is the breach rate in west?"
+      ]
+    }
   },
   "provenance": {
     "project_id": "governed_analytics",
-    "executed_at": "2026-09-17T05:01:46.432190+00:00",
+    "executed_at": "2026-09-17T06:11:55.147969+00:00",
     "mode": "local",
     "model_calls": [],
-    "elapsed_ms": 0.72,
+    "elapsed_ms": 1.01,
     "input_sha256": "7d0cefdc18743f1c9d8a5f0bdfd421171c9baedfdeb49543ea22b1702d6bb9d6",
-    "source_sha256": "a150b5b614943c6fa70421f4024093d4b7367a35e353ed39d9d0b921f19f52d0",
+    "source_sha256": "80192aba8be4dd8acaf7427655b9dfa23e44fb7c80da993629ea3b7e59ae6697",
     "data_classification": "original synthetic fixture",
     "scope": "Reference application run; not a production benchmark or employer result"
   }
