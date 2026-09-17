@@ -1,0 +1,82 @@
+{
+  "summary": "Average resolution time \u2014 central: 44.5 minutes; east: 41.5 minutes.",
+  "metrics": [
+    {
+      "label": "Released groups",
+      "value": 2,
+      "unit": "groups"
+    },
+    {
+      "label": "Records in released groups",
+      "value": 38,
+      "unit": "synthetic cases"
+    },
+    {
+      "label": "Reconciliation",
+      "value": "passed",
+      "unit": "independent calculation"
+    },
+    {
+      "label": "Minimum group size",
+      "value": 5,
+      "unit": "records"
+    }
+  ],
+  "evidence": [
+    "The request was interpreted by local intent baseline.",
+    "Only these regions were queried: east, central. SQL identifiers and aggregates came from a fixed allowlist.",
+    "SQLite query-only mode and an authorizer prevented modification; values were bound as parameters.",
+    "Results matched a separate Python calculation before disclosure controls were applied.",
+    "0 group(s) were withheld, including 0 complementary suppression(s). No suppressed values or overall totals are released.",
+    "Original synthetic records and caller-provided demo scopes; this is not a production identity or privacy system."
+  ],
+  "next_actions": [
+    "Review the metric definition and scope before using this result.",
+    "Bind scopes to authenticated identity and add query-history privacy controls before production."
+  ],
+  "details": {
+    "plan": {
+      "metric": "avg_resolution_minutes",
+      "group_by": "region",
+      "region": "all",
+      "supported": true
+    },
+    "plan_source": "local intent baseline",
+    "sql_template": "SELECT region AS group_name, COUNT(*) AS n, AVG(resolution_minutes) AS metric_value FROM operations WHERE region IN (?,?) GROUP BY region ORDER BY group_name",
+    "bound_regions": [
+      "east",
+      "central"
+    ],
+    "metric_definition": "Average resolution time",
+    "results": [
+      {
+        "group": "central",
+        "records": 20,
+        "value": 44.5,
+        "unit": "minutes"
+      },
+      {
+        "group": "east",
+        "records": 18,
+        "value": 41.5,
+        "unit": "minutes"
+      }
+    ],
+    "reconciled": true,
+    "suppressed_group_count": 0,
+    "complementary_suppression_count": 0,
+    "minimum_group_size": 5,
+    "data_origin": "original synthetic operations records"
+  },
+  "provenance": {
+    "project_id": "governed_analytics",
+    "executed_at": "2026-09-17T05:01:46.432190+00:00",
+    "mode": "local",
+    "model_calls": [],
+    "elapsed_ms": 0.72,
+    "input_sha256": "7d0cefdc18743f1c9d8a5f0bdfd421171c9baedfdeb49543ea22b1702d6bb9d6",
+    "source_sha256": "a150b5b614943c6fa70421f4024093d4b7367a35e353ed39d9d0b921f19f52d0",
+    "data_classification": "original synthetic fixture",
+    "scope": "Reference application run; not a production benchmark or employer result"
+  }
+}
